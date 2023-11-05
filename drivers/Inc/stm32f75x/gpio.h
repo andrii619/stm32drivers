@@ -69,7 +69,7 @@ typedef struct {
 	uint32_t ot13:1;
 	uint32_t ot14:1;
 	uint32_t ot15:1;
-	uint32_t reserved:16;
+	uint32_t const reserved:16;
 }GPIOx_OTYPER_s;
 
 
@@ -138,7 +138,7 @@ typedef struct  {
 	uint32_t idr13:1;
 	uint32_t idr14:1;
 	uint32_t idr15:1;
-	uint32_t reserved:16;
+	uint32_t const reserved:16;
 } GPIOx_IDR_s;
 
 
@@ -168,7 +168,7 @@ typedef struct {
 	uint32_t odr13:1;
 	uint32_t odr14:1;
 	uint32_t odr15:1;
-	uint32_t reserved:16;
+	uint32_t const reserved:16;
 } GPIOx_ODR_s ;
 
 
@@ -226,7 +226,7 @@ typedef struct {
 	uint32_t lck14:1;
 	uint32_t lck15:1;
 	uint32_t lckk:1;
-	uint32_t reserved:15;
+	uint32_t const reserved:15;
 }GPIOx_LCKR_s;
 
 
@@ -257,16 +257,16 @@ typedef struct {
 
 
 typedef struct {
-	GPIOx_MODER_s moderReg;
-	GPIOx_OTYPER_s otyper;
-	GPIOx_OSPEEDR_s ospeedReg;
-	GPIOx_PUPDR_s pupdReg;
-	GPIOx_IDR_s idReg;
-	GPIOx_ODR_s odReg;
-	GPIOx_BSRR_s bsrReg;
-	GPIOx_LCKR_s lckReg;
-	GPIOx_AFRL_s afRegLow;
-	GPIOx_AFRH_s afRegHigh;
+	GPIOx_MODER_s	volatile	moderReg;
+	GPIOx_OTYPER_s	volatile	otyper;
+	GPIOx_OSPEEDR_s	volatile 	ospeedReg;
+	GPIOx_PUPDR_s 	volatile 	pupdReg;
+	GPIOx_IDR_s 	volatile	idReg;
+	GPIOx_ODR_s 	volatile	odReg;
+	GPIOx_BSRR_s 	volatile 	bsrReg;
+	GPIOx_LCKR_s 	volatile 	lckReg;
+	GPIOx_AFRL_s	volatile	afRegLow;
+	GPIOx_AFRH_s	volatile	afRegHigh;
 }Gpio_Reg_s;
 
 
